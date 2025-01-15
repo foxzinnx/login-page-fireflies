@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://wallpapercave.com/wp/wp11859475.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.firefly {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0.5) 70%, rgba(255, 255, 0, 0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: fade 3s infinite ease-in-out;
+    transition: opacity .5s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+  }
+  
+  
+  .firefly.paused {
+    animation: none;
+  }
+
+@keyframes fade {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+.container{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    z-index: 10;
+}
+
+.container h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.container .input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    letter-spacing: .5px;
+    outline: none;
+    border: 2px solid rgba(255,255,255, .2);
+    border-radius: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 27px 45px 15px 16px;
+}
+
+.input label{
+    position: relative;
+    top: -74%;
+    left: 18px;
+    color: #fff;
+    transform: translateX(-50);
+    transition: .5s ease;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label{
+    top: -50px;
+    font-size: 11px;
+}
+
+.container .lembre-se{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.lembre-se label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.lembre-se a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.lembre-se a:hover{
+    text-decoration: underline;
+}
+
+.container .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.container .btn:hover{
+    background-color: #f3ef12; /* Cor de fundo do botão ao passar o mouse */
+    border-color: #f3ef12; /* Cor da borda ao passar o mouse */
+    box-shadow: 0 0 15px 5px rgba(243, 239, 18, 0.8); /* Brilho amarelo intenso */
+}
+
+.container .registrar{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px
+}
+
+.registrar p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registrar a:hover{
+    text-decoration: underline;
+}
